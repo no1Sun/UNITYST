@@ -109,9 +109,8 @@ class Inven
         }
         else
         {
-            Console.WriteLine("현재 선택한 아이템");
-            Console.WriteLine("이름 :" + ArrItem[SelectIndex].Name);
-            Console.WriteLine("가격 :" + ArrItem[SelectIndex].Gold);
+            Console.WriteLine("빈공간입니다.");
+           
         }
     }
 

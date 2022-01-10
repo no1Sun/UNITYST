@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4E4C9D0-ABDF-4D02-A4E6-77AA500CF27E}</ProjectGuid>
+    <ProjectGuid>{35317578-A8E9-4F8E-B95D-A4482A292161}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TextRpg001</RootNamespace>
-    <AssemblyName>TextRpg001</AssemblyName>
+    <RootNamespace>_33NULL</RootNamespace>
+    <AssemblyName>33NULL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inven.cs" />
-    <Compile Include="Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

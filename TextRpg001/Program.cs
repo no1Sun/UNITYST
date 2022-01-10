@@ -121,9 +121,17 @@ class FightUnit
 
 class Player : FightUnit
 {
+
+   private Inven PlayerInven = new Inven(5, 3);
+
+    public Inven PInven
+    {
+        get { return PlayerInven; }
+    }
+
     //코드 재활용성이 떨어진다.
     //코드 재활용성 향상 시키기 위한 문법이 상속이다.
-    
+
     public Player()
     {
         Name = "플레이어";
@@ -147,6 +155,8 @@ class Player : FightUnit
         }
         return;
     }
+
+  
 
    
 
@@ -210,8 +220,31 @@ namespace TextRpg001
             }
         }
 
+        static void Shop(Player _Player, Inven _ShopInven)
+        {
+            while(true)
+            {
+                Console.Clear();
+                Console.WriteLine("상점주인의 물건");
+                _ShopInven.Render();
+                Console.WriteLine("플레이어의 물건");
+                _Player.PInven.Render();
+                Console.ReadKey();
+
+            }
+        }
+
+
+
         static STARTSELECT Town(Player _Player)
         {
+            Inven ShopInven = new Inven(5, 3);
+
+            ShopInven.AddItem(new Item("철검", 500));
+            ShopInven.AddItem(new Item("용철검", 500));
+            ShopInven.AddItem(new Item("갑옷", 500));
+            ShopInven.AddItem(new Item("철검", 500));
+
             while (true)
             {
                 Console.Clear();
@@ -221,7 +254,7 @@ namespace TextRpg001
 
                 Console.WriteLine("마을에서 무슨 일을 하시겠습니까?");
                 Console.WriteLine("1. 체력 회복한다.");
-                Console.WriteLine("2. 무기를 강화한다.");
+                Console.WriteLine("2. 상점에 들어간다.");
                 Console.WriteLine("3. 마을을 나간다.");
 
                 switch (Console.ReadKey().Key)
@@ -233,6 +266,7 @@ namespace TextRpg001
                         break;
                     case ConsoleKey.D2:
                         _Player.UpgradeAT();
+                        Shop(_Player, ShopInven);
                         Console.ReadKey();
                         break;
                     case ConsoleKey.D3:
