@@ -58,7 +58,11 @@ namespace Dictionary
 
             //NewDic.Add("재밌따?", 4812);
 
+            
+
             DicTest NewTest = new DicTest();
+
+            //
             NewTest.Add("하하하", 1);
             NewTest.Add("하하하1", 21);
             NewTest.Add("키입니다", 1);
